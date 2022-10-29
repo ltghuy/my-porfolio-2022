@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import MainSection from '../components/MainSection'
+import Sidebar from '../components/Sidebar'
 
 export default function Home() {
   return (
@@ -7,7 +9,10 @@ export default function Home() {
         <title>Huy Le | Porfolio 2022</title>
         <meta name="description" content="Huy Le | Porfolio 2022" />
       </Head>
-      <p className="text-red-600 text-lg">Hello world</p>
+      <div>
+        <Sidebar />
+        <MainSection />
+      </div>
     </div>
   )
 }

@@ -2,11 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Tailwind CSS Custom */
+@layer utilities {
+  .copyrightvertical {
+    writing-mode: vertical-rl;
+  }
+  .rotate-180 {
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+      rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+      scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+}
 html,
 body {
   scroll-behavior: smooth;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Radio Canada', sans-serif;
 }
 
 a {
@@ -39,7 +49,7 @@ a {
     color-scheme: dark;
   }
   body {
-    color: white;
-    background: black;
+    color: var(--white);
+    background: var(--black);
   }
 }
