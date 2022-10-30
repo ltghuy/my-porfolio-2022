@@ -18,6 +18,10 @@
   .fullscreen-menu {
     width: calc(100vw - 80px);
   }
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 html,
 body {
@@ -48,6 +52,18 @@ a {
 ::-webkit-scrollbar-track {
   border-radius: 10px;
   background-color: #383838;
+}
+
+/* Text selection CSS */
+::-moz-selection {
+  /* Code for Firefox */
+  color: var(--black);
+  background: var(--primary);
+}
+
+::selection {
+  color: var(--black);
+  background: var(--primary);
 }
 
 @media (prefers-color-scheme: dark) {
