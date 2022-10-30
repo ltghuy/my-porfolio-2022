@@ -4,13 +4,19 @@
 
 /* Tailwind CSS Custom */
 @layer utilities {
-  .copyrightvertical {
+  .counter-section {
+    counter-reset: section;
+  }
+  .textvertical {
     writing-mode: vertical-rl;
   }
   .rotate-180 {
     transform: translate(var(--tw-translate-x), var(--tw-translate-y))
       rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
       scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+  .fullscreen-menu {
+    width: calc(100vw - 80px);
   }
 }
 html,

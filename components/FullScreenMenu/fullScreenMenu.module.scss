@@ -1,0 +1,12 @@
+.fullscreen_item {
+  span {
+    position: relative;
+    &::before {
+      counter-increment: section;
+      content: counter(section, decimal-leading-zero) '.';
+      padding-bottom: 0.75rem;
+      --tw-text-opacity: 1;
+      color: var(--primary);
+    }
+  }
+}

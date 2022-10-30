@@ -1,11 +1,11 @@
 import React from 'react'
 
-const MainSection = () => {
+const HomeSection = () => {
   return (
     <main className="ml-20 bg-dark-100 relative min-h-screen text-white">
-      MainSection
+      HomeSection
     </main>
   )
 }
 
-export default MainSection
+export default HomeSection

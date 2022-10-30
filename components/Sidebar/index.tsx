@@ -1,8 +1,17 @@
 import React from 'react'
 import Link from 'next/link'
 import BarsIcon from '../../public/icons/bars.svg'
+import CloseIcon from '../../public/icons/close.svg'
 
-const Sidebar = () => {
+interface SidebarProps {
+  show: boolean
+  setShowFullMenu: (show: boolean) => void
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ show, setShowFullMenu }) => {
+  const toggleFullMenu = () => {
+    setShowFullMenu(!show)
+  }
   return (
     <div className="fixed h-screen w-20 top-0 left-0 z-40 bg-dark-200 border-r border-white border-opacity-10 text-white text-center py-8 flex flex-col flex-wrap justify-between overflow-hidden">
       <div className="w-full h-[40%]">
@@ -17,17 +26,21 @@ const Sidebar = () => {
         </Link>
       </div>
       <p className="w-full h-20 flex items-center justify-center">
-        <button className="inline-block w-auto border-0 p-0 text-center align-middle text-4xl leading-none">
-          <BarsIcon />
+        <button
+          className="inline-block w-auto border-0 p-0 text-center align-middle text-4xl leading-none"
+          onClick={toggleFullMenu}
+        >
+          {!show ? <BarsIcon /> : <CloseIcon />}
         </button>
       </p>
       <div className="w-full h-[40%] flex justify-center items-end">
-        <p className="copyrightvertical rotate-180">
-          <span>© 2022</span>
+        <p className="textvertical rotate-180">
+          <span className="text-white font-normal opacity-50">© 2022</span>
           <a
             href="https://github.com/ltghuy"
             target="_blank"
             className="inline-block pt-1 font-medium text-base text-white hover:text-primary"
+            rel="noreferrer"
           >
             _ltghuy
           </a>
