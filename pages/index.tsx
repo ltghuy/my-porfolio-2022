@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { useState } from 'react'
 import Sidebar from '../components/Sidebar'
 import FullScreenMenu from '../components/FullScreenMenu'
-import HomeSection from '../components/HomeSection'
+import HomeSection from '../containers/HomeSection'
 
 export default function Home() {
   const [showFullMenu, setShowFullMenu] = useState<boolean>(false)

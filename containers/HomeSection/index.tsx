@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import Link from 'next/link'
-import TextTyping from '../TextTyping'
+import TextTyping from '../../components/TextTyping'
 import FacbookIcon from '../../public/icons/facebook.svg'
 import InstagramIcon from '../../public/icons/instagram.svg'
 import GithubIcon from '../../public/icons/github.svg'

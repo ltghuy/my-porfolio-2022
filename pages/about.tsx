@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
-import AboutSection from '../components/AboutSection'
+import AboutSection from '../containers/AboutSection'
 import Template from '../containers/Template'
 
 const About = () => {

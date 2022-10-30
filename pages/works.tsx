@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
-import WorkSection from '../components/WorksSection'
+import WorkSection from '../containers/WorksSection'
 import Template from '../containers/Template'
 
 const About = () => {

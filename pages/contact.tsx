@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
-import ContactSection from '../components/ContactSection'
+import ContactSection from '../containers/ContactSection'
 import Template from '../containers/Template'
 
 const Contact = () => {

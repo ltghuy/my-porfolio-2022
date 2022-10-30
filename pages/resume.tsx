@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
-import SkillSection from '../components/SkillSection'
+import SkillSection from '../containers/SkillSection'
 import Template from '../containers/Template'
 
 const Resume = () => {
