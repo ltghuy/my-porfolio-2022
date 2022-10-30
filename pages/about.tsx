@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
-import ContactSection from '../components/ContactSection'
+import AboutSection from '../components/AboutSection'
 import Template from '../containers/Template'
 
-const Contact = () => {
+const About = () => {
   const [showFullMenu, setShowFullMenu] = useState<boolean>(false)
   const handleShowMenu = (show: boolean) => {
     setShowFullMenu(show)
@@ -12,18 +12,18 @@ const Contact = () => {
   return (
     <div>
       <Head>
-        <title>Huy Le Porfolio | Contact</title>
-        <meta name="description" content="Huy Le Porfolio 2022 | Contact" />
+        <title>Huy Le Porfolio | About</title>
+        <meta name="description" content="Huy Le Porfolio 2022 | About" />
       </Head>
       <Template
         showFullMenu={showFullMenu}
         setShowFullMenu={handleShowMenu}
-        subTitle="Contact Us"
-        title="Contact"
-        section={<ContactSection />}
+        subTitle="Contact Me"
+        title="About"
+        section={<AboutSection />}
       />
     </div>
   )
 }
 
-export default Contact
+export default About

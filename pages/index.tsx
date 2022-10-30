@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { useState } from 'react'
-import Template from '../containers/Template'
+import Sidebar from '../components/Sidebar'
+import FullScreenMenu from '../components/FullScreenMenu'
 import HomeSection from '../components/HomeSection'
 
 export default function Home() {
@@ -15,11 +16,9 @@ export default function Home() {
         <title>Huy Le | Porfolio 2022</title>
         <meta name="description" content="Huy Le | Porfolio 2022" />
       </Head>
-      <Template
-        showFullMenu={showFullMenu}
-        setShowFullMenu={handleShowMenu}
-        section={<HomeSection />}
-      />
+      <Sidebar show={showFullMenu} setShowFullMenu={handleShowMenu} />
+      <FullScreenMenu show={showFullMenu} setShowFullMenu={handleShowMenu} />
+      <HomeSection />
     </div>
   )
 }

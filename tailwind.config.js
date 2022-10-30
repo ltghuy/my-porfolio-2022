@@ -9,8 +9,9 @@ module.exports = {
       colors: {
         primary: '#59CE8F',
         dark: {
-          100: '#030d24',
-          200: '#0F172A',
+          50: '#0f172a',
+          100: '#010e22',
+          200: '#070e1f',
         },
       },
       keyframes: {
@@ -18,10 +19,15 @@ module.exports = {
           '0%': { opacity: 1 },
           '100%': { opacity: 0 },
         },
+        lefttoright: {
+          '0%': { left: '0' },
+          '100%': { left: '100%' },
+        },
       },
       animation: {
         spin: 'spin 3s linear infinite',
         blink: 'blink 0.75s infinite',
+        lefttoright: 'lefttoright 2s ease-in-out infinite',
       },
       backgroundImage: {
         'hero-bg': "url('/images/herosection-bg.png')",
