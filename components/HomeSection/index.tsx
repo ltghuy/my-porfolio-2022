@@ -40,7 +40,11 @@ const HomeSection = () => {
                 alt="huyle avatar"
               />
             </div>
-            <TextTyping />
+            <TextTyping
+              textArray={['Huy Le', 'Front End Developer']}
+              addTextTimer={120}
+              removeTextTimer={60}
+            />
             <p className="text-center text-lg text-zinc-300">
               I am a frontend web developer. I can provide clean code and pixel
               perfect design. I also make website more & more interactive with
