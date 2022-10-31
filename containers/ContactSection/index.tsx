@@ -1,12 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PhoneIcon from '../../public/icons/phone.svg'
 import MailIcon from '../../public/icons/mail.svg'
 import PinIcon from '../../public/icons/pin.svg'
 
 const ContactSection = () => {
+  useEffect(() => {
+    const fadeIn = document.querySelectorAll(
+      '.fade-in'
+    ) as NodeListOf<HTMLElement>
+    for (let i = 0; i < fadeIn.length; ++i) {
+      setTimeout(() => {
+        fadeIn[i].style.cssText = 'opacity: 1; transform: translateY(0)'
+      }, 350 + i * 500)
+    }
+  }, [])
+
   return (
     <div className="grid grid-cols-9 gap-10 items-end">
-      <div className="col-span-4">
+      <div className="col-span-4 transition-all duration-500 fade-in">
         <h4 className="mb-3">Contact Information</h4>
         <p className="mb-3 text-base">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. A omnis,
@@ -45,7 +56,7 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-      <div className="col-span-5">
+      <div className="col-span-5  transition-all duration-500 fade-in">
         <form className="card p-5 space-y-4">
           <div className="input-box">
             <label htmlFor="name" className="block text-sm leading-6 mb-1">
@@ -96,12 +107,13 @@ const ContactSection = () => {
               cols={1}
               rows={5}
               placeholder="Enter your message..."
+              autoComplete="off"
               className="form-control w-full border border-blur py-2"
             />
           </div>
           <button
             type="submit"
-            className="inline-block py-3 px-5 bg-primary uppercase text-dark-100 text-sm leading-4 font-medium rounded tracking-wide transition opacity-80 hover:opacity-100"
+            className="inline-block outline-none py-3 px-5 bg-primary uppercase text-dark-100 text-sm leading-4 font-medium rounded tracking-wide transition opacity-80 hover:opacity-100"
           >
             <span className="relative">Send Email</span>
           </button>
