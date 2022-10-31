@@ -65,7 +65,7 @@ const HomeSection = () => {
             <ul className="inline-flex flex-wrap gap-4 mt-7 transition-all duration-500 fade-in">
               {socialList.map((item) => (
                 <li
-                  className="group align-middle w-10 h-10 inline-block border border-white border-opacity-10 cursor-pointer relative overflow-hidden rounded"
+                  className="group align-middle w-10 h-10 inline-block border border-blur cursor-pointer relative overflow-hidden rounded"
                   key={item.id}
                 >
                   <Link href={item.href} passHref legacyBehavior>

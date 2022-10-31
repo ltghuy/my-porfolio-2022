@@ -18,7 +18,7 @@ const About = () => {
       <Template
         showFullMenu={showFullMenu}
         setShowFullMenu={handleShowMenu}
-        subTitle="Contact Me"
+        subTitle="About Me"
         title="About"
         section={<AboutSection />}
       />

@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 /* Tailwind CSS Custom */
+@layer base {
+  h4 {
+    font-size: 22px;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+}
+
 @layer utilities {
   .counter-section {
     counter-reset: section;
@@ -25,6 +33,15 @@
   .container {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+  .card {
+    @apply border border-white border-opacity-10 rounded bg-white bg-opacity-5 backdrop-blur-md;
+  }
+  .border-blur {
+    @apply border-white border-opacity-10;
+  }
+  .form-control {
+    @apply text-gray-400 outline-none transition px-4 bg-transparent rounded focus:border-primary;
   }
 }
 html,
