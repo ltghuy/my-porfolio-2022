@@ -58,9 +58,9 @@ const HomeSection = () => {
               />
             </div>
             <p className="text-center text-lg text-zinc-300 transition-all duration-500 fade-in">
-              I am a frontend web developer. I can provide clean code and pixel
-              perfect design. I also make website more & more interactive with
-              web animations.
+              I am a frontend web developer. I enjoy coding and the challenge of
+              learning something new everyday. My current goal is to pursue a
+              career in front-end development.
             </p>
             <ul className="inline-flex flex-wrap gap-4 mt-7 transition-all duration-500 fade-in">
               {socialList.map((item) => (
