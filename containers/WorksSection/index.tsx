@@ -70,9 +70,9 @@ const WorkSection = () => {
                 </a>
               </div>
             </div>
-            <div className="bottom-item mt-4">
+            <div className="bottom-item mt-8">
               <h3 className="font-bold text-2xl">- {project.name} -</h3>
-              <p className="text-gray-300 text-sm">
+              <p className="text-gray-300 text-sm pt-2">
                 {project.sort_description}
               </p>
             </div>
