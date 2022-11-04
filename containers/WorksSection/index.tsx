@@ -6,7 +6,7 @@ const WorkSection = () => {
   const projectList = [
     {
       id: 1,
-      images: 'https://media.giphy.com/media/voa2kIoqASJkZzrGIG/giphy.gif',
+      images: '/images/moren.gif',
       name: 'Moren Ecommerce',
       demo: 'https://moren-ecommerce.vercel.app/',
       github: 'https://github.com/ltghuy/moren-ecommerce',
@@ -15,7 +15,7 @@ const WorkSection = () => {
     },
     {
       id: 2,
-      images: 'https://media.giphy.com/media/V4Q4SEiIPafsLFrrUD/giphy.gif',
+      images: '/images/2048.gif',
       name: 'Clone Game 2048',
       demo: 'https://2048-clone-blue.vercel.app/',
       github: 'https://github.com/ltghuy/2048-clone',
@@ -24,7 +24,7 @@ const WorkSection = () => {
     },
     {
       id: 3,
-      images: 'https://media.giphy.com/media/jHaBumFMGuHzWbKmsn/giphy.gif',
+      images: '/images/pokemon.gif',
       name: 'Pokemon Flip Card',
       demo: 'https://pokemon-flip-card.vercel.app/',
       github: 'https://github.com/ltghuy/pokemon-flip-card',
@@ -33,7 +33,7 @@ const WorkSection = () => {
     },
     {
       id: 4,
-      images: 'https://media.giphy.com/media/evH9xYLzLLed6Rb8jg/giphy.gif',
+      images: '/images/remove.gif',
       name: 'Clone Erase.bg',
       demo: 'https://erase-bg.vercel.app/',
       github: 'https://github.com/ltghuy/erase.bg',
@@ -47,7 +47,7 @@ const WorkSection = () => {
         {projectList.map((project) => (
           <div className="work-item col-span-1 card p-5" key={project.id}>
             <div className="top-item group relative overflow-hidden">
-              <span className="pt-[50%] block"></span>
+              <span className="pt-[55%] block"></span>
               <img
                 className="absolute inset-0 m-auto w-0 h-0 min-w-full max-w-full min-h-full max-h-full object-fill"
                 src={project.images}
