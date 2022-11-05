@@ -27,8 +27,8 @@ const FullScreenMenu: React.FC<FullScreenMenuProps> = ({
     <div
       className={`fullscreen-menu fixed min-h-screen top-0 left-20 bg-dark-100 z-40 text-white ${
         show
-          ? 'translate-y-0 transition-all duration-1000'
-          : 'translate-y-full transition-all duration-1000'
+          ? 'translate-y-0 transition-all duration-700'
+          : 'translate-y-full transition-all duration-700'
       }`}
     >
       <ul className="w-full h-screen flex justify-between items-center counter-section">
