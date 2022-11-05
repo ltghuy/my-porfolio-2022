@@ -43,6 +43,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="preload" as="image" href="/images/moren.gif" />
         <link rel="preload" as="image" href="/images/pokemon.gif" />
         <link rel="preload" as="image" href="/images/remove.gif" />
+        <link rel="preload" as="image" href="/images/backdrop2.gif" />
       </Head>
       <Component {...pageProps} />
     </>

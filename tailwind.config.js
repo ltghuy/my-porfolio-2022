@@ -24,11 +24,15 @@ module.exports = {
           '0%': { left: '0' },
           '100%': { left: '100%' },
         },
+        bgtowhite: {
+          to: { backgroundColor: '#ffffff30' },
+        },
       },
       animation: {
         spin: 'spin 3s linear infinite',
         blink: 'blink 0.75s infinite',
         lefttoright: 'lefttoright 2s ease-in-out infinite',
+        bgtowhite: 'bgtowhite 5s ease-in-out infinite alternate',
       },
       backgroundImage: {
         'hero-bg': "url('/images/herosection-bg.png')",

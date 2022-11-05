@@ -30,47 +30,33 @@ const SkillSection = () => {
   const educationTimeline = [
     {
       id: 1,
-      time: '2008 - 2010',
-      title: 'Higher School Graduation',
-      subTitle: 'Abc College.',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur donec gravida ullamcorper cum id. Sit viverra donec in ornare euismod.',
+      time: '2017 - 2021',
+      title: 'College graduation',
+      subTitle: 'Can Tho university.',
+      desc: `<ul class='list-disc'><li>Basic knowledge of programming, algorithms, computers.</li><li>System Analysis and Design.</li/><li>Get familiar with the database.</li></ul>`,
     },
     {
       id: 2,
-      time: '2010 - 2014',
-      title: 'Bachelor of Sciences',
-      subTitle: 'Def University.',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur donec gravida ullamcorper cum id. Sit viverra donec in ornare euismod.',
-    },
-    {
-      id: 3,
-      time: '2014 - 2016',
-      title: 'Masters of Sciences',
-      subTitle: 'Def University.',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur donec gravida ullamcorper cum id. Sit viverra donec in ornare euismod.',
+      time: '2021 - Current',
+      title: 'Self learning',
+      subTitle: 'Udemy, FreeCodeCamp',
+      desc: `<ul class='list-disc'><li>Learn about VueJS, TailwindCSS</li><li>Apply the knowledge learned to build a few personal projects.</li><li>Improve language skills</li></ul>`,
     },
   ]
   const workingTimeline = [
     {
       id: 1,
-      time: '2015 - 2017',
-      title: 'UI/UX Designer',
-      subTitle: 'Abc Company.',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur donec gravida ullamcorper cum id. Sit viverra donec in ornare euismod.',
+      time: '01/2022',
+      title: 'Front-end Developer - Intern',
+      subTitle: 'Skyblaze Studios.',
+      desc: `<ul class='list-disc'><li>Learn about ReactJS framework, Typescript and Git</li><li>Approach the workflow and participate in the construction of a few real projects.</li/></ul>`,
     },
     {
       id: 2,
-      time: '2017 - 2019',
+      time: '03/2022 - Current',
       title: 'Front-end Developer',
-      subTitle: 'Def Company.',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur donec gravida ullamcorper cum id. Sit viverra donec in ornare euismod.',
-    },
-    {
-      id: 3,
-      time: '2019 - Present',
-      title: 'Back-end Developer',
-      subTitle: 'Ghi Company.',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur donec gravida ullamcorper cum id. Sit viverra donec in ornare euismod.',
+      subTitle: 'Skyblaze Studios.',
+      desc: `<ul class='list-disc'><li>Develop and maintain front-end functionality of websites.</li><li>Do multiple projects simultaneously with high standards and performance.</li/><li>Get involved in creating a website from scratch.</li><li>Participate in finding and fixing bugs to optimize project performance.</li></ul>`,
     },
   ]
   return (
@@ -79,7 +65,7 @@ const SkillSection = () => {
         <div className="skill-list grid grid-cols-5 gap-10">
           {skillList.map((skill) => (
             <div
-              className="skill-item col-span-1 text-white hover:text-primary flex flex-col items-center transition duration-200"
+              className="skill-item col-span-1 text-white hover:text-primary flex flex-col items-center transition duration-200 hover:scale-110"
               key={skill.id}
             >
               {skill.icon}

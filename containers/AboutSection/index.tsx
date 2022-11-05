@@ -16,18 +16,19 @@ const AboutSection = () => {
       value: 'Bui Thi Xuan, Ninh Kieu, Can Tho, Viet Nam',
     },
     { id: 6, title: 'Freelance', value: 'Available' },
+    { id: 7, title: 'Hobby', value: 'Anime, Music...' },
   ]
 
   return (
     <>
       <div className="grid grid-cols-2 gap-10 items-center mb-28 relative">
-        <div className="avatarcol-span-1">
-          <div className="w-full h-96 bg-gradient-to-tr bg-primary bg-opacity-20 rounded relative">
-            <div className="p-2 absolute w-full h-full top-0 left-0">
-              <div className="w-full h-full overflow-hidden">
+        <div className="avatar col-span-1">
+          <div className="w-full h-96 bg-gradient-to-tr bg-primary bg-opacity-20 rounded relative animate-bgtowhite">
+            <div className="p-2 absolute w-full h-full top-0 left-0 overflow-hidden">
+              <div className="w-full h-full">
                 <img
                   className="w-full h-full object-cover"
-                  src="/images/backdrop2.jpg"
+                  src="/images/backdrop2.gif"
                   alt="backdrop"
                 />
               </div>
@@ -53,6 +54,12 @@ const AboutSection = () => {
               </li>
             ))}
           </ul>
+          <button
+            onClick={() => alert('Will update later!')}
+            className="inline-block outline-none py-3 px-5 bg-primary uppercase text-white text-sm leading-4 font-medium rounded tracking-wide transition bg-opacity-80 hover:bg-opacity-100 mt-5"
+          >
+            <span className="relative">Download Resume</span>
+          </button>
         </div>
       </div>
       <BaseSection subTitle="My services" title="Services" />
@@ -78,7 +85,7 @@ const AboutSection = () => {
             <p className="text-5xl text-gray-400 font-bold opacity-30">02</p>
           </div>
           <strong className="text-lg mb-3 block">Web Development</strong>
-          <p className="text-gray-400">
+          <p className="text-gray-400 min-h-[8rem]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Augue diam
             etiam venenatis mi tristique amet cras diam etiam.
           </p>

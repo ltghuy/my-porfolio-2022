@@ -4,6 +4,11 @@ import MailIcon from '../../public/icons/mail.svg'
 import PinIcon from '../../public/icons/pin.svg'
 
 const ContactSection = () => {
+  const handleSubmit = (e: any) => {
+    e.preventDefault()
+    alert("Sorry, I'll get back to you later!")
+  }
+
   useEffect(() => {
     const fadeIn = document.querySelectorAll(
       '.fade-in'
@@ -17,11 +22,10 @@ const ContactSection = () => {
 
   return (
     <div className="grid grid-cols-9 gap-10 items-end">
-      <div className="col-span-4 transition-all duration-500 fade-in">
+      <div className="information col-span-4 transition-all duration-500 fade-in">
         <h4 className="mb-3">Contact Information</h4>
         <p className="mb-3 text-base">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. A omnis,
-          iusto harum possimus non praesentium qui facere.
+          Hi, you can easily contact me through the following ways:
         </p>
         <span className="w-20 h-1 inline-block bg-primary bg-opacity-20 rounded-full"></span>
         <div className="mt-5 space-y-5">
@@ -56,7 +60,7 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-      <div className="col-span-5  transition-all duration-500 fade-in">
+      <div className="contact-form col-span-5  transition-all duration-500 fade-in">
         <form className="card p-5 space-y-4">
           <div className="input-box">
             <label htmlFor="name" className="block text-sm leading-6 mb-1">
@@ -113,6 +117,7 @@ const ContactSection = () => {
           </div>
           <button
             type="submit"
+            onClick={handleSubmit}
             className="inline-block outline-none py-3 px-5 bg-primary uppercase text-dark-100 text-sm leading-4 font-medium rounded tracking-wide transition opacity-80 hover:opacity-100"
           >
             <span className="relative">Send Email</span>
