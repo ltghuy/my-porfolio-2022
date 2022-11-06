@@ -11,7 +11,7 @@ const WorkSection = () => {
       demo: 'https://moren-ecommerce.vercel.app/',
       github: 'https://github.com/ltghuy/moren-ecommerce',
       sort_description:
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita ipsum repellat quod nam consequatur deleniti fugit sequi. Dolorum, molestias repudiandae?',
+        'An e-commerce website that specializes in selling fashion clothing. This project has main features such as: view product list, product information, shopping cart...',
     },
     {
       id: 2,
@@ -20,7 +20,7 @@ const WorkSection = () => {
       demo: 'https://2048-clone-blue.vercel.app/',
       github: 'https://github.com/ltghuy/2048-clone',
       sort_description:
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita ipsum repellat quod nam consequatur deleniti fugit sequi. Dolorum, molestias repudiandae?',
+        'A project inspired by motion graphics by Romain Cousin. And this is also my first project with Redux.',
     },
     {
       id: 3,
@@ -29,7 +29,7 @@ const WorkSection = () => {
       demo: 'https://pokemon-flip-card.vercel.app/',
       github: 'https://github.com/ltghuy/pokemon-flip-card',
       sort_description:
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita ipsum repellat quod nam consequatur deleniti fugit sequi. Dolorum, molestias repudiandae?',
+        'Based on the classic game of the same name, this project is the first project I built with VueJS after finishing the Youtube tutorial.',
     },
     {
       id: 4,
@@ -38,7 +38,7 @@ const WorkSection = () => {
       demo: 'https://erase-bg.vercel.app/',
       github: 'https://github.com/ltghuy/erase.bg',
       sort_description:
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita ipsum repellat quod nam consequatur deleniti fugit sequi. Dolorum, molestias repudiandae?',
+        'This website provides the feature to separate the subject image from the original image and add a new background to the image after separation.',
     },
   ]
   return (

@@ -73,8 +73,9 @@ const AboutSection = () => {
           </div>
           <strong className="text-lg mb-3 block">Freelancer</strong>
           <p className="text-gray-400">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Augue diam
-            etiam venenatis mi tristique amet cras diam etiam.
+            Proven work experience as a Front-end developer. I can work with one
+            client or multiple projects at the same time. Besides, I have good
+            communication skills.
           </p>
         </div>
         <div className="service card col-span-1 p-5 group transform translate-y-0 hover:-translate-y-2 duration-500">
@@ -86,8 +87,9 @@ const AboutSection = () => {
           </div>
           <strong className="text-lg mb-3 block">Web Development</strong>
           <p className="text-gray-400 min-h-[8rem]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Augue diam
-            etiam venenatis mi tristique amet cras diam etiam.
+            Focus on developing new user-facing features. Build reusable code
+            and libraries for future use. Ensure high quality graphic standards
+            and brand consistency.
           </p>
         </div>
         <div className="service card col-span-1 p-5 group transform translate-y-0 hover:-translate-y-2 duration-500">
@@ -99,8 +101,9 @@ const AboutSection = () => {
           </div>
           <strong className="text-lg mb-3 block">Mobile responsive</strong>
           <p className="text-gray-400">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Augue diam
-            etiam venenatis mi tristique amet cras diam etiam.
+            Ensure users can view a web page in multiple browsers or on
+            smartphones without affecting its style or functionality for the
+            most optimal experience.
           </p>
         </div>
       </div>
