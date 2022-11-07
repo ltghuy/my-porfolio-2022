@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import emailjs from '@emailjs/browser'
 import PhoneIcon from '../../public/icons/phone.svg'
 import MailIcon from '../../public/icons/mail.svg'
 import PinIcon from '../../public/icons/pin.svg'
@@ -6,7 +7,23 @@ import PinIcon from '../../public/icons/pin.svg'
 const ContactSection = () => {
   const handleSubmit = (e: any) => {
     e.preventDefault()
-    alert("Sorry, I'll get back to you later!")
+
+    emailjs
+      .sendForm(
+        'service_oxnkmha',
+        'template_no91955',
+        e.target,
+        'GKsV47r9O1tRMiddm'
+      )
+      .then(
+        (result) => {
+          console.log(result.text)
+        },
+        (error) => {
+          console.log(error.text)
+        }
+      )
+    e.target.reset()
   }
 
   useEffect(() => {
@@ -61,7 +78,7 @@ const ContactSection = () => {
         </div>
       </div>
       <div className="contact-form col-span-5  transition-all duration-500 fade-in">
-        <form className="card p-5 space-y-4">
+        <form className="card p-5 space-y-4" onSubmit={handleSubmit}>
           <div className="input-box">
             <label htmlFor="name" className="block text-sm leading-6 mb-1">
               Name
@@ -117,7 +134,6 @@ const ContactSection = () => {
           </div>
           <button
             type="submit"
-            onClick={handleSubmit}
             className="inline-block outline-none py-3 px-5 bg-primary uppercase text-dark-100 text-sm leading-4 font-medium rounded tracking-wide transition opacity-80 hover:opacity-100"
           >
             <span className="relative">Send Email</span>
