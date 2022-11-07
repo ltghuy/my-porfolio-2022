@@ -1,10 +1,14 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import PhoneIcon from '../../public/icons/phone.svg'
 import MailIcon from '../../public/icons/mail.svg'
 import PinIcon from '../../public/icons/pin.svg'
 
 const ContactSection = () => {
+  const [mailStatus, setMailStatus] = useState<{
+    sended: boolean
+    btnText: string
+  }>({ sended: false, btnText: 'Send Email' })
   const handleSubmit = (e: any) => {
     e.preventDefault()
 
@@ -18,6 +22,7 @@ const ContactSection = () => {
       .then(
         (result) => {
           console.log(result.text)
+          setMailStatus({ sended: true, btnText: 'Sended Email' })
         },
         (error) => {
           console.log(error.text)
@@ -134,9 +139,10 @@ const ContactSection = () => {
           </div>
           <button
             type="submit"
+            disabled={mailStatus.sended}
             className="inline-block outline-none py-3 px-5 bg-primary uppercase text-dark-100 text-sm leading-4 font-medium rounded tracking-wide transition opacity-80 hover:opacity-100"
           >
-            <span className="relative">Send Email</span>
+            <span className="relative">{mailStatus.btnText}</span>
           </button>
         </form>
       </div>
