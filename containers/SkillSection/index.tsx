@@ -33,14 +33,14 @@ const SkillSection = () => {
       time: '2017 - 2021',
       title: 'College graduation',
       subTitle: 'Can Tho university.',
-      desc: `<ul class='list-disc'><li>Basic knowledge of programming, algorithms, computers.</li><li>System Analysis and Design.</li/><li>Get familiar with the database.</li></ul>`,
+      desc: `<ul class='list-disc'><li>Basic knowledge of programming, algorithms, computers.</li><li>System Analysis and Design.</li/><li>Building a programming mindset.</li><li>Get familiar with the database.</li></ul>`,
     },
     {
       id: 2,
       time: '2021 - Current',
       title: 'Self learning',
       subTitle: 'Udemy, FreeCodeCamp',
-      desc: `<ul class='list-disc'><li>Learn about VueJS, TailwindCSS</li><li>Apply the knowledge learned to build a few personal projects.</li><li>Improve language skills</li></ul>`,
+      desc: `<ul class='list-disc'><li>Learn about VueJS, TailwindCSS.</li><li>Apply the knowledge learned to build a few personal projects.</li><li>Improve language skills.</li></ul>`,
     },
   ]
   const workingTimeline = [
@@ -49,7 +49,7 @@ const SkillSection = () => {
       time: '01/2022',
       title: 'Front-end Developer - Intern',
       subTitle: 'Skyblaze Studios.',
-      desc: `<ul class='list-disc'><li>Learn about ReactJS framework, Typescript and Git</li><li>Approach the workflow and participate in the construction of a few real projects.</li/></ul>`,
+      desc: `<ul class='list-disc'><li>Learn about ReactJS framework, Typescript and Git.</li><li>Approach the workflow and participate in the construction of a few real projects.</li/></ul>`,
     },
     {
       id: 2,
