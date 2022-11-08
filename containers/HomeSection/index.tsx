@@ -52,7 +52,7 @@ const HomeSection = () => {
             </div>
             <div className="transition-all duration-500 fade-in">
               <TextTyping
-                textArray={['Huy Le', 'Front End Developer']}
+                textArray={['Huy Le', 'a Front End Developer']}
                 addTextTimer={120}
                 removeTextTimer={60}
               />
