@@ -14,10 +14,10 @@ const Timeline: React.FC<TimelineProps> = ({ timeLineList }) => {
     <div className="timeline-list">
       {timeLineList.map((timeline) => (
         <div
-          className="timeline-item group flex justify-between min-h-[17rem]"
+          className="timeline-item group flex justify-between min-h-[22rem] md:min-h-[17rem]"
           key={timeline.id}
         >
-          <div className="timeline-date text-sm leading-none pt-6 mr-12 min-w-[150px]">
+          <div className="timeline-date hidden md:block text-sm leading-none pt-6 mr-12 min-w-[150px]">
             <span className="p-1 flex justify-center items-center text-gray-300 bg-primary bg-opacity-20 rounded-full">
               {timeline.time}
             </span>
@@ -27,6 +27,11 @@ const Timeline: React.FC<TimelineProps> = ({ timeLineList }) => {
               <div className="w-2 h-2 bg-primary shadow-md shadow-primary rounded-full hidden group-hover:block transition"></div>
             </div>
             <div className="rectangle absolute w-20 h-1 bg-white bg-opacity-20 top-6 left-0 transform -translate-x-1/2 translate-y-[calc(0.75rem-2px)]"></div>
+            <div className="timeline-date block md:hidden text-sm leading-none max-w-[150px] mb-5">
+              <span className="p-1 flex justify-center items-center text-gray-300 bg-primary bg-opacity-20 rounded-full">
+                {timeline.time}
+              </span>
+            </div>
             <h5 className="text-primary font-medium text-lg">
               {timeline.title}
             </h5>

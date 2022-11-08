@@ -21,7 +21,7 @@ const Template: React.FC<TemplateProps> = ({
     <>
       <Sidebar show={showFullMenu} setShowFullMenu={setShowFullMenu} />
       <FullScreenMenu show={showFullMenu} setShowFullMenu={setShowFullMenu} />
-      <main className="ml-20 min-h-screen bg-dark-50 text-white relative">
+      <main className="ml-0 md:ml-20 min-h-screen bg-dark-50 text-white relative">
         <div className="fixed top-0 right-0 left-auto w-full h-screen flex justify-around">
           <span className="border-r border-white border-opacity-5"></span>
           <span className="border-r border-white border-opacity-5"></span>

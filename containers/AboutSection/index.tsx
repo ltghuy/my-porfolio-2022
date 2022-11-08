@@ -13,7 +13,7 @@ const AboutSection = () => {
     {
       id: 5,
       title: 'Address',
-      value: 'Bui Thi Xuan, Ninh Kieu, Can Tho, Viet Nam',
+      value: 'Can Tho, Viet Nam',
     },
     { id: 6, title: 'Freelance', value: 'Available' },
     { id: 7, title: 'Hobby', value: 'Anime, Music...' },
@@ -21,7 +21,7 @@ const AboutSection = () => {
 
   return (
     <>
-      <div className="grid grid-cols-2 gap-10 items-center mb-28 relative">
+      <div className="about-section grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-28 relative">
         <div className="avatar col-span-1">
           <div className="w-full h-96 bg-gradient-to-tr bg-primary bg-opacity-20 rounded relative animate-bgtowhite">
             <div className="p-2 absolute w-full h-full top-0 left-0 overflow-hidden">
@@ -44,26 +44,26 @@ const AboutSection = () => {
             {descriptionInfo.map((description) => (
               <li
                 key={description.id}
-                className="text-lg text-gray-400 font-medium marker:text-primary list-disc ml-6"
+                className="text-lg text-gray-400 font-normal md:font-medium marker:text-primary list-disc ml-6"
               >
-                <strong className="min-w-[120px] inline-block">
+                <span className="min-w-[120px] inline-block">
                   {description.title}
-                </strong>
+                </span>
                 : &nbsp;
-                {description.value}
+                <span>{description.value}</span>
               </li>
             ))}
           </ul>
           <button
             onClick={() => alert('Will update later!')}
-            className="inline-block outline-none py-3 px-5 bg-primary uppercase text-white text-sm leading-4 font-medium rounded tracking-wide transition bg-opacity-80 hover:bg-opacity-100 mt-5"
+            className="inline-block outline-none py-3 px-5 bg-primary uppercase text-white text-sm leading-4 font-medium rounded tracking-wide transition bg-opacity-80 hover:bg-opacity-100 mt-10 md:mt-5"
           >
             <span className="relative">Download Resume</span>
           </button>
         </div>
       </div>
       <BaseSection subTitle="My services" title="Services" />
-      <div className="service-wrapper grid grid-cols-3 gap-7 relative">
+      <div className="service-wrapper grid grid-cols-1 md:grid-cols-3 gap-7 relative">
         <div className="service card col-span-1 p-5 group transform translate-y-0 hover:-translate-y-2 duration-500">
           <div className="flex justify-between mb-6">
             <div className="w-20 h-20 bg-primary bg-opacity-20 rounded-full p-5 text-primary group-hover:text-white transition">

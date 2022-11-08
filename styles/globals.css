@@ -23,9 +23,6 @@
       rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
       scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
-  .fullscreen-menu {
-    width: calc(100vw - 80px);
-  }
   .fade-in {
     opacity: 0;
     transform: translateY(50%);

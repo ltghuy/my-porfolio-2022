@@ -7,7 +7,7 @@ interface BaseSectionProps {
 
 const BaseSection: React.FC<BaseSectionProps> = ({ subTitle, title }) => {
   return (
-    <div className="base-section relative pb-14 text-center">
+    <div className="base-section relative pb-14 text-center overflow-hidden">
       <h2 className="relative z-10 mb-2 font-bold text-4xl uppercase">
         {subTitle}
       </h2>

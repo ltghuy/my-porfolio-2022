@@ -44,7 +44,7 @@ const ContactSection = () => {
 
   return (
     <div className="grid grid-cols-9 gap-10 items-end">
-      <div className="information col-span-4 transition-all duration-500 fade-in">
+      <div className="information col-span-9 md:col-span-4 transition-all duration-500 fade-in">
         <h4 className="mb-3">Contact Information</h4>
         <p className="mb-3 text-base">
           Hi, you can easily contact me through the following ways:
@@ -82,7 +82,7 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-      <div className="contact-form col-span-5  transition-all duration-500 fade-in">
+      <div className="contact-form col-span-9 md:col-span-5  transition-all duration-500 fade-in">
         <form className="card p-5 space-y-4" onSubmit={handleSubmit}>
           <div className="input-box">
             <label htmlFor="name" className="block text-sm leading-6 mb-1">

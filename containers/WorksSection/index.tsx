@@ -43,11 +43,11 @@ const WorkSection = () => {
   ]
   return (
     <div className="work-wrapper">
-      <div className="work-section relative mt-5 grid grid-cols-2 gap-y-10 gap-x-16">
+      <div className="work-section relative mt-5 grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-16">
         {projectList.map((project) => (
           <div className="work-item col-span-1 card p-5" key={project.id}>
             <div className="top-item group relative overflow-hidden">
-              <span className="pt-[55%] block"></span>
+              <span className="pt-[70%] md:pt-[55%] block"></span>
               <img
                 className="absolute inset-0 m-auto w-0 h-0 min-w-full max-w-full min-h-full max-h-full object-fill"
                 src={project.images}
