@@ -1,5 +1,6 @@
 import React from 'react'
 import { useRouter } from 'next/router'
+import CloseIcon from '../../public/icons/close.svg'
 import styles from './fullScreenMenu.module.scss'
 
 interface FullScreenMenuProps {
@@ -25,18 +26,28 @@ const FullScreenMenu: React.FC<FullScreenMenuProps> = ({
 
   return (
     <div
-      className={`w-full md:w-[calc(100%-5rem)] fixed min-h-screen top-0 left-20 bg-dark-100 z-40 text-white ${
+      className={`full-menu w-full md:w-[calc(100%-5rem)] fixed min-h-screen top-0 left-0 md:left-20 bg-dark-100 z-40 text-white ${
         show
           ? 'translate-y-0 transition-all duration-700'
           : 'translate-y-full transition-all duration-700'
       }`}
     >
-      <ul className="w-full h-screen flex justify-between items-center counter-section">
+      <ul className="menu-list w-full h-screen flex justify-between items-center flex-col md:flex-row counter-section py-28 md:py-0">
+        <p className="absolute top-0 left-0 text-4xl text-primary font-bold uppercase p-7 block md:hidden">
+          Huy Le
+          <span className="text-white ml-1">&there4;</span>
+        </p>
+        <button
+          className="close-icon absolute top-4 right-4 w-10 h-10 text-3xl text-primary bg-primary bg-opacity-20 rounded-full border-0 outline-none flex justify-center items-center md:hidden"
+          onClick={() => setShowFullMenu(false)}
+        >
+          <CloseIcon />
+        </button>
         {listMenu.map((item) => (
           <li
             key={item.id}
             onClick={() => handleClick(item.href)}
-            className={`${styles.fullscreen_item} text-6xl uppercase font-bold textvertical rotate-180 flex basis-1/5 h-full items-center justify-center border-l border-blur hover:basis-2/5 hover:text-primary transition-all duration-500 cursor-pointer`}
+            className={`${styles.fullscreen_item} menu-item text-lg md:text-6xl uppercase font-bold md:textvertical md:rotate-180 h-full w-full flex basis-1/5 items-center justify-center md:border-l border-blur md:hover:basis-2/5 hover:text-primary transition-all duration-500 cursor-pointer`}
           >
             <span>{item.label}</span>
           </li>
