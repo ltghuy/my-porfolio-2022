@@ -32,22 +32,22 @@ const FullScreenMenu: React.FC<FullScreenMenuProps> = ({
           : 'translate-y-full transition-all duration-700'
       }`}
     >
+      <p className="absolute top-0 left-0 text-4xl text-primary font-bold uppercase p-7 block md:hidden">
+        Huy Le
+        <span className="text-white ml-1">&there4;</span>
+      </p>
+      <button
+        className="close-icon absolute top-4 right-4 w-10 h-10 text-3xl text-primary bg-primary bg-opacity-20 rounded-full border-0 outline-none flex justify-center items-center md:hidden"
+        onClick={() => setShowFullMenu(false)}
+      >
+        <CloseIcon />
+      </button>
       <ul className="menu-list w-full h-screen flex justify-between items-center flex-col md:flex-row counter-section py-28 md:py-0">
-        <p className="absolute top-0 left-0 text-4xl text-primary font-bold uppercase p-7 block md:hidden">
-          Huy Le
-          <span className="text-white ml-1">&there4;</span>
-        </p>
-        <button
-          className="close-icon absolute top-4 right-4 w-10 h-10 text-3xl text-primary bg-primary bg-opacity-20 rounded-full border-0 outline-none flex justify-center items-center md:hidden"
-          onClick={() => setShowFullMenu(false)}
-        >
-          <CloseIcon />
-        </button>
         {listMenu.map((item) => (
           <li
             key={item.id}
             onClick={() => handleClick(item.href)}
-            className={`${styles.fullscreen_item} menu-item text-lg md:text-6xl uppercase font-bold md:textvertical md:rotate-180 h-full w-full flex basis-1/5 items-center justify-center md:border-l border-blur md:hover:basis-2/5 hover:text-primary transition-all duration-500 cursor-pointer`}
+            className={`${styles.fullscreen_item} menu-item text-lg md:text-8xl uppercase font-bold md:textvertical md:rotate-180 h-full w-full flex basis-1/5 items-center justify-center md:border-l border-blur md:hover:basis-2/5 text-white md:text-transparent hover:text-primary transition-all duration-500 cursor-pointer`}
           >
             <span>{item.label}</span>
           </li>

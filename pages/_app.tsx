@@ -38,6 +38,7 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="preload" as="image" href="/images/backdrop2.jpg" />
+        <link rel="preload" as="image" href="/images/home-bg.jpg" />
         <link rel="preload" as="image" href="/images/huyle.jpg" />
         <link rel="preload" as="image" href="/images/2048.gif" />
         <link rel="preload" as="image" href="/images/moren.gif" />

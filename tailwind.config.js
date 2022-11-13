@@ -35,7 +35,8 @@ module.exports = {
         bgtowhite: 'bgtowhite 5s ease-in-out infinite alternate',
       },
       backgroundImage: {
-        'hero-bg': "url('/images/herosection-bg.png')",
+        'hero1-bg': "url('/images/home-bg.jpg')",
+        'hero2-bg': "url('/images/herosection-bg.png')",
       },
     },
   },
