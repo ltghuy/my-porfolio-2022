@@ -43,7 +43,7 @@ const HomeSection = () => {
         <div className="relative">
           <div className="py-10 md:py-0 mx-auto flex justify-center flex-col items-center w-full md:w-2/3 min-h-screen">
             <div className="avatar w-[140px] md:w-[150px] h-[140px] md:h-[150px] relative transition-all duration-500 fade-in">
-              <div className="w-full h-full absolute bg-gradient-to-tr from-[#59ce8f] via-[#025d3f] to-[#0f172a] rounded-full animate-spin"></div>
+              <div className="w-full h-full absolute bg-gradient-to-tr from-[#59ce8f] via-[#025d3f] to-[#0f172a] rounded-full animate-spin" />
               <img
                 className="w-full h-full absolute object-cover rounded-full p-[6px]"
                 src="/images/huyle.jpg"
@@ -61,7 +61,7 @@ const HomeSection = () => {
                 removeTextTimer={60}
               />
             </div>
-            <p className="text-center text-base md:text-lg text-zinc-300 transition-all duration-500 fade-in">
+            <p className="description text-center text-base md:text-lg text-zinc-300 transition-all duration-500 fade-in">
               I am a frontend web developer. I enjoy coding and the challenge of
               learning something new everyday. My current goal is to pursue a
               career in front-end development.

@@ -22,7 +22,7 @@ const AboutSection = () => {
   return (
     <>
       <div className="about-section grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-28 relative">
-        <div className="avatar col-span-1">
+        <div className="image col-span-1">
           <div className="w-full h-96 bg-gradient-to-tr bg-primary bg-opacity-20 rounded relative animate-bgtowhite">
             <div className="p-2 absolute w-full h-full top-0 left-0 overflow-hidden">
               <div className="w-full h-full">
@@ -54,12 +54,13 @@ const AboutSection = () => {
               </li>
             ))}
           </ul>
-          <button
-            onClick={() => alert('Will update later!')}
+          <a
+            href="my-cv.pdf"
+            download="resume.pdf"
             className="inline-block outline-none py-3 px-5 bg-primary uppercase text-white text-sm leading-4 font-medium rounded tracking-wide transition bg-opacity-80 hover:bg-opacity-100 mt-10 md:mt-5"
           >
             <span className="relative">Download Resume</span>
-          </button>
+          </a>
         </div>
       </div>
       <BaseSection subTitle="My services" title="Services" />
