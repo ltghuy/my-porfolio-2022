@@ -6,7 +6,8 @@ const WorkSection = () => {
   const projectList = [
     {
       id: 1,
-      images: '/images/moren.gif',
+      images: '/images/moren.jpg',
+      video: '/images/moren.mp4',
       name: 'Moren Ecommerce',
       demo: 'https://moren-ecommerce.vercel.app/',
       github: 'https://github.com/ltghuy/moren-ecommerce',
@@ -15,7 +16,8 @@ const WorkSection = () => {
     },
     {
       id: 2,
-      images: '/images/2048.gif',
+      images: '/images/2048.jpg',
+      video: '/images/2048.mp4',
       name: 'Clone Game 2048',
       demo: 'https://2048-clone-blue.vercel.app/',
       github: 'https://github.com/ltghuy/2048-clone',
@@ -24,7 +26,8 @@ const WorkSection = () => {
     },
     {
       id: 3,
-      images: '/images/pokemon.gif',
+      images: '/images/pokemon.jpg',
+      video: '/images/pokemon.mp4',
       name: 'Pokemon Flip Card',
       demo: 'https://pokemon-flip-card.vercel.app/',
       github: 'https://github.com/ltghuy/pokemon-flip-card',
@@ -33,7 +36,8 @@ const WorkSection = () => {
     },
     {
       id: 4,
-      images: '/images/remove.gif',
+      images: '/images/remove-bg.jpg',
+      video: '/images/remove-bg.mp4',
       name: 'Clone Erase.bg',
       demo: 'https://erase-bg.vercel.app/',
       github: 'https://github.com/ltghuy/erase.bg',
@@ -48,11 +52,17 @@ const WorkSection = () => {
           <div className="work-item col-span-1 card p-5" key={project.id}>
             <div className="top-item group relative overflow-hidden">
               <span className="pt-[70%] md:pt-[55%] block"></span>
-              <img
-                className="absolute inset-0 m-auto w-0 h-0 min-w-full max-w-full min-h-full max-h-full object-fill"
-                src={project.images}
-                alt={project.name}
-              />
+              <video
+                className="absolute inset-0 m-auto w-0 h-0 min-w-full max-w-full min-h-full max-h-full"
+                autoPlay
+                loop
+                muted
+                playsInline
+                poster={project.images}
+                preload="auto"
+              >
+                <source src={project.video} type="video/mp4" />
+              </video>
               <div className="absolute w-full h-full top-0 left-0 bg-dark-200 bg-opacity-75 backdrop-blur-sm transform duration-500 -translate-x-full flex justify-center items-center group-hover:translate-x-0">
                 <a
                   href={project.demo}

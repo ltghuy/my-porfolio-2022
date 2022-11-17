@@ -40,10 +40,30 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="preload" as="image" href="/images/backdrop2.jpg" />
         <link rel="preload" as="image" href="/images/home-bg.jpg" />
         <link rel="preload" as="image" href="/images/huyle.jpg" />
-        <link rel="preload" as="image" href="/images/2048.gif" />
-        <link rel="preload" as="image" href="/images/moren.gif" />
-        <link rel="preload" as="image" href="/images/pokemon.gif" />
-        <link rel="preload" as="image" href="/images/remove.gif" />
+        <link
+          rel="preload"
+          as="video"
+          type="video/mp4"
+          href="/images/moren.mp4"
+        />
+        <link
+          rel="preload"
+          as="video"
+          type="video/mp4"
+          href="/images/pokemon.mp4"
+        />
+        <link
+          rel="preload"
+          as="video"
+          type="video/mp4"
+          href="/images/2048.mp4"
+        />
+        <link
+          rel="preload"
+          as="video"
+          type="video/mp4"
+          href="/images/remove-bg.mp4"
+        />
         <link rel="preload" as="image" href="/images/backdrop2.gif" />
       </Head>
       <Component {...pageProps} />
