@@ -1,8 +1,10 @@
 import React from 'react'
+import Image from 'next/image'
 import BaseSection from '../../components/BaseSection'
 import FreeLancerIcon from '../../public/icons/freelancer.svg'
 import WebCodeIcon from '../../public/icons/webcode.svg'
 import MobileIcon from '../../public/icons/mobile.svg'
+import AnimeTyping from '../../public/images/backdrop2.gif'
 
 const AboutSection = () => {
   const descriptionInfo = [
@@ -26,10 +28,10 @@ const AboutSection = () => {
           <div className="w-full h-96 bg-gradient-to-tr bg-primary bg-opacity-20 rounded relative animate-bgtowhite">
             <div className="p-2 absolute w-full h-full top-0 left-0 overflow-hidden">
               <div className="w-full h-full">
-                <img
-                  className="w-full h-full object-cover"
-                  src="/images/backdrop2.gif"
+                <Image
+                  src={AnimeTyping}
                   alt="backdrop"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>

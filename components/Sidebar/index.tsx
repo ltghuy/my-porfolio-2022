@@ -1,8 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import BarsIcon from '../../public/icons/bars.svg'
 import CloseIcon from '../../public/icons/close.svg'
 import ArrowIcon from '../../public/icons/arrow.svg'
+import Avatar from '../../public/images/huyle.jpg'
 
 interface SidebarProps {
   show: boolean
@@ -19,11 +21,7 @@ const Sidebar: React.FC<SidebarProps> = ({ show, setShowFullMenu }) => {
         <div className="w-full h-[40%]">
           <Link href="/">
             <div className="logo w-[60px] h-[60px] rounded-full inline-block border-2 border-primary overflow-hidden">
-              <img
-                className="w-full h-full object-cover"
-                src="/images/huyle.jpg"
-                alt="avatar"
-              />
+              <Image src={Avatar} alt="avatar" />
             </div>
           </Link>
         </div>

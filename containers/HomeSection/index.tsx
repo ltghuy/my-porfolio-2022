@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import TextTyping from '../../components/TextTyping'
 import FacbookIcon from '../../public/icons/facebook.svg'
 import InstagramIcon from '../../public/icons/instagram.svg'
 import GithubIcon from '../../public/icons/github.svg'
 import LinkedinIcon from '../../public/icons/linkedin.svg'
+import Avatar from '../../public/images/huyle.jpg'
 
 const HomeSection = () => {
   const socialList = [
@@ -44,10 +46,10 @@ const HomeSection = () => {
           <div className="py-10 md:py-0 mx-auto flex justify-center flex-col items-center w-full md:w-2/3 min-h-screen">
             <div className="avatar w-[140px] md:w-[150px] h-[140px] md:h-[150px] relative transition-all duration-500 fade-in">
               <div className="w-full h-full absolute bg-gradient-to-tr from-[#59ce8f] via-[#025d3f] to-[#0f172a] rounded-full animate-spin" />
-              <img
+              <Image
+                src={Avatar}
+                alt="avatar"
                 className="w-full h-full absolute object-cover rounded-full p-[6px]"
-                src="/images/huyle.jpg"
-                alt="huyle avatar"
               />
             </div>
             <div className="transition-all duration-500 fade-in">
