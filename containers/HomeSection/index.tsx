@@ -68,7 +68,7 @@ const HomeSection = () => {
               learning something new everyday. My current goal is to pursue a
               career in front-end development.
             </p>
-            <ul className="social-list inline-flex flex-wrap gap-4 mt-7 transition-all duration-500 fade-in">
+            <ul className="social-list inline-flex flex-wrap gap-4 mt-7 transition-all duration-500 fade-in cursor-scale cursor-scale-small">
               {socialList.map((item) => (
                 <li
                   className="social-item group align-middle w-10 h-10 inline-block border border-blur cursor-pointer relative overflow-hidden rounded"

@@ -27,6 +27,16 @@
     opacity: 0;
     transform: translateY(50%);
   }
+  .grow,
+  .grow-small {
+    background: var(--white);
+    border: none;
+    mix-blend-mode: difference;
+    transform: scale(4.5);
+  }
+  .grow-small {
+    transform: scale(2);
+  }
   .container {
     padding-left: 1rem;
     padding-right: 1rem;

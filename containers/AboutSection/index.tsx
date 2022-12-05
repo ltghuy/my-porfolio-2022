@@ -24,7 +24,7 @@ const AboutSection = () => {
   return (
     <>
       <div className="about-section grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-28 relative">
-        <div className="image col-span-1">
+        <div className="image col-span-1 cursor-scale">
           <div className="w-full h-96 bg-gradient-to-tr bg-primary bg-opacity-20 rounded relative animate-bgtowhite">
             <div className="p-2 absolute w-full h-full top-0 left-0 overflow-hidden">
               <div className="w-full h-full">

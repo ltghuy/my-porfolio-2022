@@ -49,7 +49,7 @@ const FullScreenMenu: React.FC<FullScreenMenuProps> = ({
             onClick={() => handleClick(item.href)}
             className={`${styles.fullscreen_item} menu-item text-lg md:text-8xl uppercase font-bold md:textvertical md:rotate-180 h-full w-full flex basis-1/5 items-center justify-center md:border-l border-blur md:hover:basis-2/5 text-white md:text-transparent hover:text-primary transition-all duration-500 cursor-pointer`}
           >
-            <span>{item.label}</span>
+            <span className="cursor-scale">{item.label}</span>
           </li>
         ))}
       </ul>

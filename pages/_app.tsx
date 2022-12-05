@@ -1,7 +1,8 @@
+import type { AppProps } from 'next/app'
 import Head from 'next/head'
+import Cursor from '../components/Cursor'
 import '../styles/color.css'
 import '../styles/globals.css'
-import type { AppProps } from 'next/app'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -37,7 +38,7 @@ export default function App({ Component, pageProps }: AppProps) {
           href="/favicon/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
-        <link rel="preload" as="image" href="/images/backdrop2.jpg" />
+        <link rel="preload" as="image" href="/images/backdrop2.gif" />
         <link rel="preload" as="image" href="/images/home-bg.jpg" />
         <link rel="preload" as="image" href="/images/huyle.jpg" />
         <link
@@ -64,8 +65,8 @@ export default function App({ Component, pageProps }: AppProps) {
           type="video/mp4"
           href="/images/remove-bg.mp4"
         />
-        <link rel="preload" as="image" href="/images/backdrop2.gif" />
       </Head>
+      <Cursor />
       <Component {...pageProps} />
     </>
   )
