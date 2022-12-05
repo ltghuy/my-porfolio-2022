@@ -34,7 +34,7 @@ const Cursor = () => {
     })
 
     // Animation using GSAP
-    gsap.to({}, 0.05, {
+    gsap.to({}, 0.1, {
       repeat: -1,
 
       onRepeat: function () {
