@@ -8,12 +8,23 @@ const Cursor = () => {
     const cursor = document.querySelector('.custom-cursor')
     const cursorScale = document.querySelectorAll('.cursor-scale')
 
+    const getCursorPostion = (e: any) => {
+      mouseX = e.clientX
+      mouseY = e.clientY
+    }
+
     cursorScale.forEach((ele) => {
-      ele.addEventListener('mouseleave', () => {
-        cursor?.classList.remove('grow')
-        cursor?.classList.remove('grow-small')
-      })
-      ele.addEventListener('mousemove', () => {
+      ;['click', 'mouseleave'].forEach((evt) =>
+        ele.addEventListener(
+          evt,
+          () => {
+            cursor?.classList.remove('grow')
+            cursor?.classList.remove('grow-small')
+          },
+          false
+        )
+      )
+      ele.addEventListener('mouseenter', (e: any) => {
         cursor?.classList.add('grow')
         if (ele.classList.contains('cursor-scale-small')) {
           cursor?.classList.remove('grow')
@@ -22,13 +33,8 @@ const Cursor = () => {
       })
     })
 
-    const getCursorPostion = (e: any) => {
-      mouseX = e.clientX
-      mouseY = e.clientY
-    }
-
     // Animation using GSAP
-    gsap.to({}, 0.1, {
+    gsap.to({}, 0.05, {
       repeat: -1,
 
       onRepeat: function () {
