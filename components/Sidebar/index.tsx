@@ -39,6 +39,7 @@ const Sidebar: React.FC<SidebarProps> = ({ show, setShowFullMenu }) => {
             <a
               href="https://github.com/ltghuy"
               target="_blank"
+              rel="noreferrer"
               className="inline-block pt-1 font-medium text-base text-white hover:text-primary"
             >
               _ltghuy

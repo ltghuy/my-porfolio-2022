@@ -57,7 +57,8 @@ const TextTyping: React.FC<TextTypingProps> = ({
     }
     // start animation
     typingText()
-  }, [])
+  }, [addTextTimer, removeTextTimer, textArray])
+
   return (
     <h1 className="typing-text text-center text-4xl md:text-5xl leading-10 md:leading-[56px] font-bold px-5 my-10 md:my-5">
       Hi, I am &nbsp;
