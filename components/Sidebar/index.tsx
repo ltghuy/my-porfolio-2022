@@ -33,14 +33,13 @@ const Sidebar: React.FC<SidebarProps> = ({ show, setShowFullMenu }) => {
             {!show ? <BarsIcon /> : <CloseIcon />}
           </button>
         </p>
-        <div className="coppy-right w-full h-[40%] flex justify-center items-end cursor-scale cursor-scale-small">
-          <p className="textvertical rotate-180">
+        <div className="coppy-right w-full h-[40%] flex justify-center items-end cursor-scale-small">
+          <p className="textvertical rotate-180 cursor-scale">
             <span className="text-white font-normal opacity-50">© 2022</span>
             <a
               href="https://github.com/ltghuy"
               target="_blank"
               className="inline-block pt-1 font-medium text-base text-white hover:text-primary"
-              rel="noreferrer"
             >
               _ltghuy
             </a>

@@ -14,18 +14,15 @@ const Cursor = () => {
     }
 
     cursorScale.forEach((ele) => {
-      ;['click', 'mouseleave'].forEach((evt) =>
-        ele.addEventListener(
-          evt,
-          () => {
-            cursor?.classList.remove('grow')
-            cursor?.classList.remove('grow-small')
-          },
-          false
-        )
+      ;['click', 'mouseleave'].forEach((e: any) =>
+        ele.addEventListener(e, () => {
+          cursor?.classList.remove('grow')
+          cursor?.classList.remove('grow-small')
+        })
       )
       ele.addEventListener('mouseenter', (e: any) => {
         cursor?.classList.add('grow')
+        getCursorPostion(e)
         if (ele.classList.contains('cursor-scale-small')) {
           cursor?.classList.remove('grow')
           cursor?.classList.add('grow-small')
@@ -34,14 +31,14 @@ const Cursor = () => {
     })
 
     // Animation using GSAP
-    gsap.to({}, 0.1, {
+    gsap.to({}, 0.015, {
       repeat: -1,
 
       onRepeat: function () {
         gsap.set(cursor, {
           css: {
-            left: mouseX,
-            top: mouseY,
+            left: mouseX - 10,
+            top: mouseY - 10,
           },
         })
       },

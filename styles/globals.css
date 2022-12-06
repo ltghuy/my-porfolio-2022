@@ -32,10 +32,10 @@
     background: var(--white);
     border: none;
     mix-blend-mode: difference;
-    transform: scale(4.5);
+    transform: scale(5);
   }
   .grow-small {
-    transform: scale(2);
+    transform: scale(2.5);
   }
   .container {
     padding-left: 1rem;
