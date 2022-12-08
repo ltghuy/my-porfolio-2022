@@ -12,7 +12,7 @@ const Cursor = () => {
     const cursorScale = document.querySelectorAll('.cursor-scale')
 
     const getCursorPostion = (e: any) => {
-      cursor?.classList.add('scale-100')
+      cursor?.classList.remove('scale-0')
       mouseX = e.clientX
       mouseY = e.clientY
 
@@ -31,7 +31,7 @@ const Cursor = () => {
       })
 
       // Animation using GSAP
-      gsap.to({}, 0.075, {
+      gsap.to({}, 0.065, {
         repeat: -1,
 
         onRepeat: function () {
@@ -53,6 +53,7 @@ const Cursor = () => {
 
   useEffect(() => {
     const cursor = document.querySelector('.custom-cursor')
+    cursor?.classList.remove('scale-0')
     cursor?.classList.remove('grow')
     cursor?.classList.remove('grow-small')
   }, [router.asPath])
