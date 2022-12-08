@@ -53,7 +53,6 @@ const Cursor = () => {
 
   useEffect(() => {
     const cursor = document.querySelector('.custom-cursor')
-    cursor?.classList.remove('scale-0')
     cursor?.classList.remove('grow')
     cursor?.classList.remove('grow-small')
   }, [router.asPath])
