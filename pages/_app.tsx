@@ -66,7 +66,7 @@ export default function App({ Component, pageProps }: AppProps) {
           href="/images/remove-bg.mp4"
         />
       </Head>
-      <Cursor />
+      <!-- <Cursor /> -->
       <Component {...pageProps} />
     </>
   )
