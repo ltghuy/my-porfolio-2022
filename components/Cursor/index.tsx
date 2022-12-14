@@ -31,18 +31,22 @@ const Cursor = () => {
       })
 
       // Animation using GSAP
-      gsap.to({}, 0.065, {
-        repeat: -1,
-
-        onRepeat: function () {
-          gsap.set(cursor, {
-            css: {
-              left: mouseX - 10,
-              top: mouseY - 10,
-            },
-          })
-        },
-      })
+      gsap.to(
+        {},
+        {
+          repeat: -1,
+          duration: 0.0001,
+          smoothOrigin: true,
+          onRepeat: function () {
+            gsap.set(cursor, {
+              css: {
+                left: mouseX - 10,
+                top: mouseY - 10,
+              },
+            })
+          },
+        }
+      )
     }
 
     window.addEventListener('mousemove', getCursorPostion)
