@@ -1,68 +1,76 @@
-import React, { useEffect, useLayoutEffect } from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
 import { useRouter } from 'next/router'
 import gsap from 'gsap'
 
 const Cursor = () => {
   const router = useRouter()
+  const cursorRef = useRef(null)
 
   useLayoutEffect(() => {
-    let mouseX = 0
-    let mouseY = 0
-    const cursor = document.querySelector('.custom-cursor')
-    const cursorScale = document.querySelectorAll('.cursor-scale')
+    let cursor = document.querySelector('.custom-cursor') as HTMLElement,
+      cursorScale = document.querySelectorAll('.cursor-scale'),
+      mouseX = 0,
+      mouseY = 0
+    cursor.style.display = 'none'
 
-    const getCursorPostion = (e: any) => {
-      cursor?.classList.remove('scale-0')
+    function setMousePosition(e: MouseEvent) {
       mouseX = e.clientX
       mouseY = e.clientY
+      cursor.style.display = 'block'
+    }
 
-      cursorScale.forEach((ele) => {
-        ele.addEventListener('mouseleave', (e: any) => {
-          cursor?.classList.remove('grow')
-          cursor?.classList.remove('grow-small')
-        })
-        ele.addEventListener('mouseenter', (e: any) => {
-          cursor?.classList.add('grow')
-          if (ele.classList.contains('cursor-scale-small')) {
-            cursor?.classList.remove('grow')
-            cursor?.classList.add('grow-small')
-          }
-        })
+    let ctx = gsap.context(() => {
+      gsap.to(cursor, {
+        duration: 0.1,
+        repeat: -1,
+        onRepeat: function () {
+          gsap.set(cursor, {
+            css: {
+              left: mouseX - 10,
+              top: mouseY - 10,
+            },
+          })
+        },
       })
+    }, cursorRef)
 
-      // Animation using GSAP
-      gsap.to(
-        {},
-        {
-          repeat: -1,
-          duration: 0.0001,
-          smoothOrigin: true,
-          onRepeat: function () {
-            gsap.set(cursor, {
-              css: {
-                left: mouseX - 10,
-                top: mouseY - 10,
-              },
-            })
-          },
+    window.addEventListener('mousemove', (e) => setMousePosition(e))
+
+    cursorScale.forEach((ele) => {
+      ele.addEventListener('mouseleave', () => {
+        cursor?.classList.remove('grow')
+        cursor?.classList.remove('grow-small')
+      })
+      ele.addEventListener('mouseenter', () => {
+        cursor?.classList.add('grow')
+        if (ele.classList.contains('cursor-scale-small')) {
+          cursor?.classList.remove('grow')
+          cursor?.classList.add('grow-small')
         }
-      )
-    }
+      })
+    })
 
-    window.addEventListener('mousemove', getCursorPostion)
-    return () => {
-      window.removeEventListener('mousemove', getCursorPostion)
-    }
-  })
-
-  useEffect(() => {
-    const cursor = document.querySelector('.custom-cursor')
-    cursor?.classList.remove('grow')
-    cursor?.classList.remove('grow-small')
+    return () => ctx.revert()
   }, [router.asPath])
 
+  useLayoutEffect(() => {
+    const resetCursor = () => {
+      let cursor = document.querySelector('.custom-cursor') as HTMLElement
+      cursor?.classList.remove('grow')
+      cursor?.classList.remove('grow-small')
+    }
+
+    router.events.on('routeChangeComplete', resetCursor)
+    return () => {
+      router.events.off('routeChangeComplete', resetCursor)
+    }
+  }, [router.events])
+
   return (
-    <div className="custom-cursor w-10 h-10 fixed border-2 border-primary rounded-full scale-0 z-50 pointer-events-none transition-all origin-center hidden md:block" />
+    <div
+      ref={cursorRef}
+      className="custom-cursor w-10 h-10 fixed border-2 border-primary rounded-full z-50 pointer-events-none transition-all origin-center hidden md:block"
+    />
   )
 }
 
