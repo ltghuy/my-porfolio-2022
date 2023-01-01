@@ -44,6 +44,16 @@ const WorkSection = () => {
       sort_description:
         'This website provides the feature to separate the subject image from the original image and add a new background to the image after separation.',
     },
+    {
+      id: 5,
+      images: '/images/sky-musik.jpg',
+      video: '/images/sky-musik.mp4',
+      name: 'Sky Musik',
+      demo: 'https://sky-muzik.vercel.app/',
+      github: 'https://github.com/ltghuy/sky-muzik',
+      sort_description:
+        'Built through ZingMp3 API. Allows users to view the latest playlists, artist information, music videos and lyrics....',
+    },
   ]
   return (
     <div className="work-wrapper">

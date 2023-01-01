@@ -41,6 +41,11 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="preload" as="image" href="/images/backdrop2.gif" />
         <link rel="preload" as="image" href="/images/home-bg.jpg" />
         <link rel="preload" as="image" href="/images/huyle.jpg" />
+        <link rel="preload" as="image" href="/images/sky-musik.jpg" />
+        <link rel="preload" as="image" href="/images/2048.jpg" />
+        <link rel="preload" as="image" href="/images/moren.jpg" />
+        <link rel="preload" as="image" href="/images/pokemon.jpg" />
+        <link rel="preload" as="image" href="/images/remove-bg.jpg" />
         <link
           rel="preload"
           as="video"
@@ -64,6 +69,12 @@ export default function App({ Component, pageProps }: AppProps) {
           as="video"
           type="video/mp4"
           href="/images/remove-bg.mp4"
+        />
+        <link
+          rel="preload"
+          as="video"
+          type="video/mp4"
+          href="/images/sky-musik.mp4"
         />
       </Head>
       <Cursor />
