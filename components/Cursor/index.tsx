@@ -12,9 +12,12 @@ const Cursor = () => {
       mouseX = 0,
       mouseY = 0
 
+    cursor.style.display = 'none'
+
     function setMousePosition(e: MouseEvent) {
       mouseX = e.clientX
       mouseY = e.clientY
+      cursor.style.display = 'block'
     }
 
     let ctx = gsap.context(() => {
