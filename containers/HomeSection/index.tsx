@@ -59,8 +59,8 @@ const HomeSection = () => {
                   'Front End Developer',
                   'Freelancer',
                 ]}
-                addTextTimer={120}
-                removeTextTimer={60}
+                addTextTimer={80}
+                removeTextTimer={50}
               />
             </div>
             <p className="description text-center text-base md:text-lg text-zinc-300 transition-all duration-500 fade-in">

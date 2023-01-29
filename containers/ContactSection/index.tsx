@@ -140,7 +140,7 @@ const ContactSection = () => {
           <button
             type="submit"
             disabled={mailStatus.sended}
-            className="inline-block outline-none py-3 px-5 bg-primary uppercase text-dark-100 text-sm leading-4 font-medium rounded tracking-wide transition opacity-80 hover:opacity-100"
+            className="inline-block outline-none py-3 px-5 bg-primary uppercase text-dark-100 text-sm leading-4 font-medium rounded tracking-wide transition cursor-scale"
           >
             <span className="relative">{mailStatus.btnText}</span>
           </button>

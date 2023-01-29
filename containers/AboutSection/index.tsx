@@ -59,7 +59,7 @@ const AboutSection = () => {
           <a
             href="my-cv.pdf"
             download="resume.pdf"
-            className="inline-block outline-none py-3 px-5 bg-primary uppercase text-white text-sm leading-4 font-medium rounded tracking-wide transition bg-opacity-80 hover:bg-opacity-100 mt-10 md:mt-5"
+            className="inline-block outline-none py-3 px-5 bg-primary uppercase text-white text-sm leading-4 font-medium rounded tracking-wide transition cursor-scale mt-10 md:mt-5"
           >
             <span className="relative">Download Resume</span>
           </a>

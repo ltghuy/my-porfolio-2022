@@ -60,7 +60,7 @@ const TextTyping: React.FC<TextTypingProps> = ({
   }, [])
 
   return (
-    <h1 className="typing-text text-center text-4xl md:text-5xl leading-10 md:leading-[56px] font-bold px-5 my-10 md:my-5">
+    <h1 className="typing-text text-center min-h-[120px] text-4xl md:text-5xl leading-10 md:leading-[56px] font-bold px-5 my-10 md:my-5">
       Hi, I am &nbsp;
       <br className="block md:hidden" />
       <span className="text-primary typetext"></span>

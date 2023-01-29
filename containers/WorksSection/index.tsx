@@ -99,11 +99,11 @@ const WorkSection = () => {
           </div>
         ))}
       </div>
-      <div className="mt-[60px] text-center">
+      <div className="mt-[60px] text-center cursor-scale">
         <a
           href="https://github.com/ltghuy?tab=repositories"
           target="_blank"
-          className="inline-block outline-none py-3 px-5 bg-primary uppercase text-dark-100 text-sm leading-4 font-medium rounded tracking-wide transition opacity-80 hover:opacity-100"
+          className="inline-block outline-none py-3 px-5 bg-primary uppercase text-dark-100 text-sm leading-4 font-medium rounded tracking-wide transition"
         >
           <span className="relative">See all</span>
         </a>
