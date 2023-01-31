@@ -60,7 +60,7 @@ const WorkSection = () => {
       <div className="work-section relative mt-5 grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-16">
         {projectList.map((project) => (
           <div className="work-item col-span-1 card p-5" key={project.id}>
-            <div className="top-item group relative overflow-hidden">
+            <div className="top-item group relative overflow-hidden cursor-scale">
               <span className="pt-[70%] md:pt-[55%] block"></span>
               <video
                 className="absolute inset-0 m-auto w-0 h-0 min-w-full max-w-full min-h-full max-h-full"

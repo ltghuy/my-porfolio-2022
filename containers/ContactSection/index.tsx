@@ -9,6 +9,7 @@ const ContactSection = () => {
     sended: boolean
     btnText: string
   }>({ sended: false, btnText: 'Send Email' })
+
   const handleSubmit = (e: any) => {
     e.preventDefault()
 
@@ -57,7 +58,7 @@ const ContactSection = () => {
             </span>
             <div className="content">
               <h5 className="text-lg font-medium mb-2">Contact on phone</h5>
-              <p className="text-gray-500">+84 79 668 255</p>
+              <p className="text-gray-500">+84 79 668 2XX</p>
             </div>
           </div>
           <div className="card flex p-5 transition hover:border-primary">

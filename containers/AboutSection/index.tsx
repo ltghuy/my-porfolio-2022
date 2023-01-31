@@ -7,10 +7,16 @@ import MobileIcon from '../../public/icons/mobile.svg'
 import AnimeTyping from '../../public/images/backdrop2.gif'
 
 const AboutSection = () => {
+  const getAge = (birthday: string) => {
+    const ageDifMs = Date.now() - new Date(birthday).getTime()
+    const ageDate = new Date(ageDifMs)
+    return Math.abs(ageDate.getUTCFullYear() - 1970)
+  }
+
   const descriptionInfo = [
     { id: 1, title: 'First Name', value: 'Le' },
     { id: 2, title: 'Last Name', value: 'Huy' },
-    { id: 3, title: 'Age', value: '23' },
+    { id: 3, title: 'Age', value: getAge('1999-04-10') },
     { id: 4, title: 'Nationality', value: 'Viet Nam' },
     {
       id: 5,
