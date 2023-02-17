@@ -4,7 +4,9 @@ import CSSIcon from '../../public/icons/skills/css.svg'
 import GitIcon from '../../public/icons/skills/git.svg'
 import NextIcon from '../../public/icons/skills/nextjs.svg'
 import ReactIcon from '../../public/icons/skills/reactjs.svg'
+import ReactQueryIcon from '../../public/icons/skills/react-query.svg'
 import ReduxIcon from '../../public/icons/skills/redux.svg'
+import ZustandIcon from '../../public/icons/skills/zustand.svg'
 import SassIcon from '../../public/icons/skills/sass.svg'
 import TailwindIcon from '../../public/icons/skills/tailwind.svg'
 import TypeScriptIcon from '../../public/icons/skills/typescript.svg'
@@ -22,10 +24,16 @@ const SkillSection = () => {
     { id: 4, name: 'SASS', icon: <SassIcon className="w-[40%]" /> },
     { id: 5, name: 'TailwindCSS', icon: <TailwindIcon className="w-[40%]" /> },
     { id: 6, name: 'ReactJS', icon: <ReactIcon className="w-[40%]" /> },
-    { id: 7, name: 'NextJS', icon: <NextIcon className="w-[40%]" /> },
-    { id: 8, name: 'VueJS', icon: <VueIcon className="w-[40%]" /> },
-    { id: 9, name: 'Redux', icon: <ReduxIcon className="w-[40%]" /> },
-    { id: 10, name: 'Git', icon: <GitIcon className="w-[40%]" /> },
+    {
+      id: 7,
+      name: 'React Query',
+      icon: <ReactQueryIcon className="w-[40%]" />,
+    },
+    { id: 8, name: 'NextJS', icon: <NextIcon className="w-[40%]" /> },
+    { id: 9, name: 'VueJS', icon: <VueIcon className="w-[40%]" /> },
+    { id: 10, name: 'Redux', icon: <ReduxIcon className="w-[40%]" /> },
+    { id: 11, name: 'Zustand', icon: <ZustandIcon className="w-[40%]" /> },
+    { id: 12, name: 'Git', icon: <GitIcon className="w-[40%]" /> },
   ]
   const educationTimeline = [
     {
@@ -62,7 +70,7 @@ const SkillSection = () => {
   return (
     <>
       <div className="skill-wrapper relative mb-28">
-        <div className="skill-list grid grid-cols-2 md:grid-cols-5 gap-10">
+        <div className="skill-list grid grid-cols-2 md:grid-cols-4 gap-12">
           {skillList.map((skill) => (
             <div
               className="skill-item col-span-1 text-white hover:text-primary flex flex-col items-center transition duration-200 hover:scale-110 cursor-scale"
