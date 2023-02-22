@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import TextTyping from '../../components/TextTyping'
@@ -27,16 +27,6 @@ const HomeSection = () => {
       href: 'https://www.linkedin.com/in/ltghuy/',
     },
   ]
-  useEffect(() => {
-    const fadeIn = document.querySelectorAll(
-      '.fade-in'
-    ) as NodeListOf<HTMLElement>
-    for (let i = 0; i < fadeIn.length; ++i) {
-      setTimeout(() => {
-        fadeIn[i].style.cssText = 'opacity: 1; transform: translateY(0)'
-      }, 300 + i * 500)
-    }
-  }, [])
 
   return (
     <main className="home-section ml-0 md:ml-20 bg-dark-100 text-white px-4 md:px-0">
@@ -59,8 +49,8 @@ const HomeSection = () => {
                   'Front End Developer',
                   'Freelancer',
                 ]}
-                addTextTimer={80}
-                removeTextTimer={50}
+                addTextTimer={120}
+                removeTextTimer={60}
               />
             </div>
             <p className="description text-center text-base md:text-lg text-zinc-300 transition-all duration-500 fade-in">

@@ -1,10 +1,22 @@
 import type { AppProps } from 'next/app'
+import { useEffect } from 'react'
 import Head from 'next/head'
 import Cursor from '../components/Cursor'
 import '../styles/color.css'
 import '../styles/globals.css'
 
 export default function App({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    const fadeIn = document.querySelectorAll(
+      '.fade-in'
+    ) as NodeListOf<HTMLElement>
+    for (let i = 0; i < fadeIn.length; ++i) {
+      setTimeout(() => {
+        fadeIn[i].classList.remove('fade-in')
+      }, 300 + i * 500)
+    }
+  })
+
   return (
     <>
       <Head>

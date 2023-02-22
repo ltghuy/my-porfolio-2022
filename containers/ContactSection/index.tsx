@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import emailjs from '@emailjs/browser'
 import PhoneIcon from '../../public/icons/phone.svg'
 import MailIcon from '../../public/icons/mail.svg'
@@ -31,17 +31,6 @@ const ContactSection = () => {
       )
     e.target.reset()
   }
-
-  useEffect(() => {
-    const fadeIn = document.querySelectorAll(
-      '.fade-in'
-    ) as NodeListOf<HTMLElement>
-    for (let i = 0; i < fadeIn.length; ++i) {
-      setTimeout(() => {
-        fadeIn[i].style.cssText = 'opacity: 1; transform: translateY(0)'
-      }, 350 + i * 500)
-    }
-  }, [])
 
   return (
     <div className="grid grid-cols-9 gap-10 items-end">

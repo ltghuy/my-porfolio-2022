@@ -73,7 +73,7 @@ const SkillSection = () => {
         <div className="skill-list grid grid-cols-2 md:grid-cols-4 gap-12">
           {skillList.map((skill) => (
             <div
-              className="skill-item col-span-1 text-white hover:text-primary flex flex-col items-center transition duration-200 hover:scale-110 cursor-scale"
+              className="skill-item col-span-1 text-white md:hover:text-primary flex flex-col items-center transition duration-200 md:hover:scale-110 cursor-scale"
               key={skill.id}
             >
               {skill.icon}

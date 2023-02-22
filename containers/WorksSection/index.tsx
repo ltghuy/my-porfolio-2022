@@ -73,7 +73,7 @@ const WorkSection = () => {
               >
                 <source src={project.video} type="video/mp4" />
               </video>
-              <div className="absolute w-full h-full top-0 left-0 bg-dark-200 bg-opacity-75 backdrop-blur-sm transform duration-500 -translate-x-full flex justify-center items-center group-hover:translate-x-0">
+              <div className="absolute w-full h-full top-0 left-0 bg-dark-200 bg-opacity-75 backdrop-blur-sm transform duration-700 -translate-x-full flex justify-center items-center group-hover:translate-x-0">
                 <a
                   href={project.demo}
                   target="_blank"

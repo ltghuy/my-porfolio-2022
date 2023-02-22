@@ -9,10 +9,11 @@ const Cursor = () => {
   useLayoutEffect(() => {
     let cursor = document.querySelector('.custom-cursor') as HTMLElement,
       cursorScale = document.querySelectorAll('.cursor-scale'),
-      mouseX = 10000,
-      mouseY = 10000
+      mouseX = 0,
+      mouseY = 0
 
     function setMousePosition(e: MouseEvent) {
+      cursor.classList.add('md:block')
       mouseX = e.clientX
       mouseY = e.clientY
     }
@@ -24,8 +25,8 @@ const Cursor = () => {
         onRepeat: function () {
           gsap.set(cursor, {
             css: {
-              left: mouseX - 10,
-              top: mouseY - 10,
+              left: mouseX - 15,
+              top: mouseY - 15,
             },
           })
         },
@@ -54,6 +55,7 @@ const Cursor = () => {
   useLayoutEffect(() => {
     const resetCursor = () => {
       let cursor = document.querySelector('.custom-cursor') as HTMLElement
+      cursor?.classList.remove('md:block')
       cursor?.classList.remove('grow')
       cursor?.classList.remove('grow-small')
     }
@@ -67,7 +69,7 @@ const Cursor = () => {
   return (
     <div
       ref={cursorRef}
-      className="custom-cursor w-10 h-10 fixed border-2 border-primary rounded-full z-50 pointer-events-none transition-all origin-center hidden md:block"
+      className="custom-cursor w-9 h-9 fixed border-2 border-primary rounded-full z-50 pointer-events-none transition-all origin-center hidden"
     />
   )
 }
