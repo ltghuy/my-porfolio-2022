@@ -57,7 +57,7 @@ const WorkSection = () => {
   ]
   return (
     <div className="work-wrapper">
-      <div className="work-section relative mt-5 grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-16">
+      <div className="work-section relative mt-5 grid grid-cols-1 lg:grid-cols-2 gap-y-10 gap-x-16">
         {projectList.map((project) => (
           <div className="work-item col-span-1 card p-5" key={project.id}>
             <div className="top-item group relative overflow-hidden cursor-scale">

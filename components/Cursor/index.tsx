@@ -13,7 +13,7 @@ const Cursor = () => {
       mouseY = 0
 
     function setMousePosition(e: MouseEvent) {
-      cursor.classList.add('md:block')
+      cursor.classList.add('min-[1440px]:block')
       mouseX = e.clientX
       mouseY = e.clientY
     }
@@ -55,7 +55,7 @@ const Cursor = () => {
   useLayoutEffect(() => {
     const resetCursor = () => {
       let cursor = document.querySelector('.custom-cursor') as HTMLElement
-      cursor?.classList.remove('md:block')
+      cursor?.classList.remove('min-[1440px]:block')
       cursor?.classList.remove('grow')
       cursor?.classList.remove('grow-small')
     }

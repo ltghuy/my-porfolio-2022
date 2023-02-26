@@ -33,7 +33,7 @@ const HomeSection = () => {
       <div className="w-full h-screen overflow-hidden relative">
         <div className="w-full h-full absolute left-0 top-0 bg-hero2-bg md:bg-hero1-bg md:bg-center md:bg-cover opacity-10"></div>
         <div className="relative">
-          <div className="py-10 md:py-0 mx-auto flex justify-center flex-col items-center w-full md:w-2/3 min-h-screen">
+          <div className="py-10 md:py-0 mx-auto flex justify-center flex-col items-center w-full lg:w-2/3 min-h-screen">
             <div className="avatar w-[140px] md:w-[150px] h-[140px] md:h-[150px] relative transition-all duration-500 fade-in">
               <div className="w-full h-full absolute bg-gradient-to-tr from-[#59ce8f] via-[#025d3f] to-[#0f172a] rounded-full animate-spin" />
               <Image

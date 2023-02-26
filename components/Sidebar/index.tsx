@@ -17,7 +17,7 @@ const Sidebar: React.FC<SidebarProps> = ({ show, setShowFullMenu }) => {
   }
   return (
     <>
-      <div className="sidebar fixed h-screen w-20 top-0 left-0 z-40 bg-dark-200 border-r border-blur text-white text-center py-8 hidden md:flex flex-col flex-wrap justify-between overflow-hidden">
+      <div className="sidebar fixed h-full w-20 top-0 left-0 z-40 bg-dark-200 border-r border-blur text-white text-center py-8 hidden md:flex flex-col flex-wrap justify-between overflow-hidden">
         <div className="w-full h-[40%]">
           <Link href="/">
             <div className="logo w-[60px] h-[60px] rounded-full inline-block border-2 border-primary overflow-hidden">

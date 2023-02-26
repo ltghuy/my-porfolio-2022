@@ -29,7 +29,7 @@ const AboutSection = () => {
 
   return (
     <>
-      <div className="about-section grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-28 relative">
+      <div className="about-section grid grid-cols-1 md:grid-cols-2 items-center mb-28 relative">
         <div className="image col-span-1 cursor-scale">
           <div className="w-full h-96 bg-gradient-to-tr bg-primary bg-opacity-20 rounded relative animate-bgtowhite">
             <div className="p-2 absolute w-full h-full top-0 left-0 overflow-hidden">
@@ -43,7 +43,7 @@ const AboutSection = () => {
             </div>
           </div>
         </div>
-        <div className="info col-span-1">
+        <div className="info col-span-1 ml-0 md:ml-10 mt-10 md:mt-0">
           <h3 className="text-2xl font-semibold mb-3">
             Hi, I am &nbsp;
             <span className="text-primary">Huy Le</span>
@@ -72,8 +72,8 @@ const AboutSection = () => {
         </div>
       </div>
       <BaseSection subTitle="My services" title="Services" />
-      <div className="service-wrapper grid grid-cols-1 md:grid-cols-3 gap-7 relative">
-        <div className="service card col-span-1 p-5 group transform translate-y-0 hover:-translate-y-2 duration-500">
+      <div className="service-wrapper grid grid-cols-1 lg:grid-cols-3 relative -m-3">
+        <div className="service card col-span-1 p-5 group transform translate-y-0 hover:-translate-y-2 duration-500 m-3 min-h-[300px]">
           <div className="flex justify-between mb-6">
             <div className="w-20 h-20 bg-primary bg-opacity-20 rounded-full p-5 text-primary group-hover:text-white transition">
               <FreeLancerIcon />
@@ -87,7 +87,7 @@ const AboutSection = () => {
             communication skills.
           </p>
         </div>
-        <div className="service card col-span-1 p-5 group transform translate-y-0 hover:-translate-y-2 duration-500">
+        <div className="service card col-span-1 p-5 group transform translate-y-0 hover:-translate-y-2 duration-500 m-3 min-h-[300px]">
           <div className="flex justify-between mb-6">
             <div className="w-20 h-20 bg-primary bg-opacity-20 rounded-full p-5 text-primary group-hover:text-white transition">
               <WebCodeIcon />
@@ -101,7 +101,7 @@ const AboutSection = () => {
             and brand consistency.
           </p>
         </div>
-        <div className="service card col-span-1 p-5 group transform translate-y-0 hover:-translate-y-2 duration-500">
+        <div className="service card col-span-1 p-5 group transform translate-y-0 hover:-translate-y-2 duration-500 m-3 min-h-[300px]">
           <div className="flex justify-between mb-6">
             <div className="w-20 h-20 bg-primary bg-opacity-20 rounded-full p-5 text-primary group-hover:text-white transition">
               <MobileIcon />

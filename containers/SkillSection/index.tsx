@@ -83,7 +83,7 @@ const SkillSection = () => {
         </div>
       </div>
       <BaseSection subTitle="My resume" title="Resume" />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-7 relative">
+      <div className="grid grid-cols-1 xl:grid-cols-2 gap-7 relative">
         <div className="education-timeline col-span-1">
           <h4 className="title flex items-center text-primary text-xl font-semibold mb-3">
             <EducationIcon />
