@@ -1,6 +1,5 @@
-import React from 'react'
+import SourceIcon from '../../public/icons/github.svg'
 import ImageIcon from '../../public/icons/image.svg'
-import ShareIcon from '../../public/icons/share.svg'
 
 const WorkSection = () => {
   const projectList = [
@@ -77,6 +76,7 @@ const WorkSection = () => {
                 <a
                   href={project.demo}
                   target="_blank"
+                  rel="noreferrer"
                   className="w-10 h-10 rounded-full bg-primary text-dark-200 flex items-center justify-center hover:text-white transition mx-2"
                 >
                   <ImageIcon />
@@ -84,9 +84,10 @@ const WorkSection = () => {
                 <a
                   href={project.github}
                   target="_blank"
+                  rel="noreferrer"
                   className="w-10 h-10 rounded-full bg-primary text-dark-200 flex items-center justify-center hover:text-white transition mx-2"
                 >
-                  <ShareIcon />
+                  <SourceIcon />
                 </a>
               </div>
             </div>
@@ -103,6 +104,7 @@ const WorkSection = () => {
         <a
           href="https://github.com/ltghuy?tab=repositories"
           target="_blank"
+          rel="noreferrer"
           className="inline-block outline-none py-3 px-5 bg-primary uppercase text-dark-100 text-sm leading-4 font-medium rounded tracking-wide transition"
         >
           <span className="relative">See all</span>

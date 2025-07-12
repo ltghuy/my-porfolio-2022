@@ -1,5 +1,3 @@
-import React from 'react'
-
 interface TimelineProps {
   timeLineList: Array<{
     id: number
@@ -9,7 +7,7 @@ interface TimelineProps {
     desc: string
   }>
 }
-const Timeline: React.FC<TimelineProps> = ({ timeLineList }) => {
+const Timeline = ({ timeLineList }: TimelineProps) => {
   return (
     <div className="timeline-list">
       {timeLineList.map((timeline) => (

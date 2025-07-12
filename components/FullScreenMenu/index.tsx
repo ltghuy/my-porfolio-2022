@@ -1,4 +1,3 @@
-import React from 'react'
 import { useRouter } from 'next/router'
 import CloseIcon from '../../public/icons/close.svg'
 import styles from './fullScreenMenu.module.scss'
@@ -7,10 +6,7 @@ interface FullScreenMenuProps {
   show: boolean
   setShowFullMenu: (show: boolean) => void
 }
-const FullScreenMenu: React.FC<FullScreenMenuProps> = ({
-  show,
-  setShowFullMenu,
-}) => {
+const FullScreenMenu = ({ show, setShowFullMenu }: FullScreenMenuProps) => {
   const listMenu = [
     { id: 1, label: 'Home', href: '/' },
     { id: 2, label: 'About', href: '/about' },
@@ -18,6 +14,7 @@ const FullScreenMenu: React.FC<FullScreenMenuProps> = ({
     { id: 4, label: 'Works', href: '/works' },
     { id: 5, label: 'Contact', href: '/contact' },
   ]
+
   const router = useRouter()
   const handleClick = (href: string) => {
     router.push(href)
@@ -47,7 +44,7 @@ const FullScreenMenu: React.FC<FullScreenMenuProps> = ({
           <li
             key={item.id}
             onClick={() => handleClick(item.href)}
-            className={`${styles.fullscreen_item} menu-item text-lg md:text-8xl uppercase font-bold md:textvertical md:rotate-180 h-full w-full flex basis-1/5 items-center justify-center md:border-l border-blur md:hover:basis-2/5 text-white md:text-transparent hover:text-primary transition-all duration-500 cursor-pointer`}
+            className={`${styles.fullscreen_item} menu-item text-lg md:text-8xl uppercase font-bold md:textvertical md:rotate-180 h-full w-full md:w-auto flex basis-1/5 items-center justify-center md:border-l border-blur md:hover:basis-2/5 text-white md:text-transparent hover:text-primary transition-all duration-500 cursor-pointer`}
           >
             <span className="cursor-scale">{item.label}</span>
           </li>

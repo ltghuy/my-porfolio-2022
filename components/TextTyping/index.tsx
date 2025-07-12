@@ -1,15 +1,15 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 interface TextTypingProps {
   textArray: Array<string>
   addTextTimer: number
   removeTextTimer: number
 }
 
-const TextTyping: React.FC<TextTypingProps> = ({
+const TextTyping = ({
   textArray,
   addTextTimer,
   removeTextTimer,
-}) => {
+}: TextTypingProps) => {
   useEffect(() => {
     const typeText = document.querySelector('.typetext') as HTMLElement
     let index = 0,
@@ -60,10 +60,15 @@ const TextTyping: React.FC<TextTypingProps> = ({
   }, [])
 
   return (
-    <h1 className="typing-text text-center min-h-[120px] text-4xl lg:text-5xl leading-10 md:leading-[56px] font-bold px-5 my-10 md:my-5">
-      Hi, I am &nbsp;
+    <h1 className="typing-text text-center min-h-[120px] lg:min-h-[60px] text-4xl lg:text-5xl leading-10 md:leading-[56px] font-bold px-5 my-10 md:my-5">
+      Hi, I&lsquo;m &nbsp;
       <br className="block md:hidden" />
-      <span className="text-primary typetext"></span>
+      <span
+        className="text-primary typetext drop-shadow-green-glow"
+        style={{
+          filter: 'drop-shadow(0 10px 2px rgba(89, 206, 143, 0.2));',
+        }}
+      ></span>
       <span className="text-primary inline-block animate-blink">|</span>
     </h1>
   )

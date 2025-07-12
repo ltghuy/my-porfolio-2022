@@ -38,6 +38,9 @@ module.exports = {
         'hero1-bg': "url('/images/home-bg.jpg')",
         'hero2-bg': "url('/images/herosection-bg.png')",
       },
+      boxShadow: {
+        'green-glow': '0 0 30px 5px rgba(89, 206, 143, 0.2)',
+      },
     },
   },
   plugins: [],

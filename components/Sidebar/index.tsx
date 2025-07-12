@@ -1,9 +1,8 @@
-import React from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
+import Link from 'next/link'
+import ArrowIcon from '../../public/icons/arrow.svg'
 import BarsIcon from '../../public/icons/bars.svg'
 import CloseIcon from '../../public/icons/close.svg'
-import ArrowIcon from '../../public/icons/arrow.svg'
 import Avatar from '../../public/images/huyle.jpg'
 
 interface SidebarProps {
@@ -11,7 +10,7 @@ interface SidebarProps {
   setShowFullMenu: (show: boolean) => void
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ show, setShowFullMenu }) => {
+const Sidebar = ({ setShowFullMenu, show }: SidebarProps) => {
   const toggleFullMenu = () => {
     setShowFullMenu(!show)
   }

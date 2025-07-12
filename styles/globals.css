@@ -62,7 +62,7 @@ html,
 body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
-  font-family: 'Radio Canada', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 a {
