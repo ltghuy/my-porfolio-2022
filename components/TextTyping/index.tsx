@@ -57,6 +57,7 @@ const TextTyping = ({
     }
     // start animation
     typingText()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

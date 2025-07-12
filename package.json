@@ -9,6 +9,9 @@
     "lint": "next lint",
     "prepare": "husky install ./.husky"
   },
+  "engines": {
+    "node": "18.x"
+  },
   "dependencies": {
     "@emailjs/browser": "^3.9.1",
     "@svgr/webpack": "^5.5.0",

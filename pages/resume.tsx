@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
 import Head from 'next/head'
+import { useState } from 'react'
 import SkillSection from '../containers/SkillSection'
 import Template from '../containers/Template'
 

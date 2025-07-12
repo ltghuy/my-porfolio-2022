@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { useState } from 'react'
-import Sidebar from '../components/Sidebar'
 import FullScreenMenu from '../components/FullScreenMenu'
+import Sidebar from '../components/Sidebar'
 import HomeSection from '../containers/HomeSection'
 
 export default function Home() {

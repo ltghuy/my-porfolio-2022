@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
 import Head from 'next/head'
+import { useState } from 'react'
 import AboutSection from '../containers/AboutSection'
 import Template from '../containers/Template'
 
@@ -12,8 +12,8 @@ const About = () => {
   return (
     <div>
       <Head>
-        <title>Huy Le Porfolio | About</title>
-        <meta name="description" content="Huy Le Porfolio 2022 | About" />
+        <title>Huy Le Portfolio | About</title>
+        <meta name="description" content="Huy Le Portfolio 2022 | About" />
       </Head>
       <Template
         showFullMenu={showFullMenu}

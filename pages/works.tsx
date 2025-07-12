@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
 import Head from 'next/head'
-import WorkSection from '../containers/WorksSection'
+import { useState } from 'react'
 import Template from '../containers/Template'
+import WorkSection from '../containers/WorksSection'
 
 const About = () => {
   const [showFullMenu, setShowFullMenu] = useState<boolean>(false)
